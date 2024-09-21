@@ -9,6 +9,7 @@
 body {
     scroll-behavior: smooth;
     font-family: Roboto;
+    overflow-x: hidden;
 }
 
 /* header section css */
@@ -44,7 +45,7 @@ body {
     height: 50px;   
     width: 100px;
     margin-left: 40px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .youtube-name{
@@ -53,9 +54,16 @@ body {
 
 .youtube-icon{
     height: 80%;
-    width: 50px;
+    width: 100%;
     /* width: 100%; */
     
+}
+
+sup{
+    font-size: 10px;
+    opacity: 0.8;
+    margin-left: 7px;
+    margin-top: 5px;
 }
 
 
@@ -78,7 +86,7 @@ body {
 form {
     display: flex;
     height: 36px;
-    /* border: 2px solid red; */
+    border: 2px solid red;
 }
 
 #search {
@@ -127,13 +135,8 @@ input::placeholder {
     margin-left: 15px;
 }
 
-.mic {
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    /* border: 1px solid red; */
-    margin-top: 7px;
-    margin-left: 8px;
+.mic-container img{
+    padding: 4px;
 }
 
 
@@ -165,39 +168,41 @@ input::placeholder {
 
 
 /* main container css */
-.main-content {
+/* .main-content {
     display: flex;
     width: 100%;
     position: relative;
     top: 53px;
     background-color: white;
-    /* border: 2px solid rgb(174, 15, 134); */
+    border: 2px solid rgb(174, 15, 134);
 
-}
+} */
 
 
 .small-sidebar {
     width: 75px;
     height: 97%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     position: fixed;
-    padding-top: 25px;
+    padding-top: 10px;
     left: -75px;
+    top: 53px;
     font-size: 10px;
 }
 
-.small-div-box>svg {
-    /* border: 1px solid black; */
-    margin-left: -10px;
-    display: inline;
+
+.small-div-box img{
+    height: 24px;
+    width: 24px;
+    margin-left: 24px;
 }
 
-p.box-content {
-    display: inline;
-    text-align: center;
-    /* white-space: nowrap; */
+.box-content1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     /* border: 1px solid black; */
-    margin-left: auto;
+    padding-top: 5px;
 }
 
 .small-div-box {
@@ -234,7 +239,7 @@ p.box-content {
     background-color: white;
 }
 
-#opensidebarMenu:checked~.small-sidebar {
+#opensidebarMenu:checked ~.small-sidebar {
     left: 0;
 }
 
@@ -289,6 +294,12 @@ p.box-content {
     /* border: 1px solid red; */
 }
 
+.color-svg img{
+    height: 24px;
+    width: 24px;
+    /* border: 1px solid blue; */
+}
+
 .side-part-1-content>p {
     margin-left: 15px;
     font-size: 13px;
@@ -319,12 +330,13 @@ p.box-content {
 
 .suggestion {
     display: flex;
-    width: calc(100% - 240px);
+    width: calc(100% - 245px);
     align-items: center;
     overflow: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
     position: fixed;
+    top: 53px;
     left: 245px;
     padding: 8px 10px 8px 0;
     z-index: 1;
@@ -347,12 +359,13 @@ p.box-content {
 /* youtube video section */
 
 .youtube-video {
-    /* border: 1px solid black; */
-    height: 600px;
-    width: calc(100% - 240px);
+    border: 1px solid black;
+    /* height: 600px; */
+    width: calc(100% - 245px);
+    top: 120px;
     left: 245px;
     position: relative;
-    top: 60px;
+    /* top: 60px; */
     display: flex;
     flex-wrap: wrap;
     padding-left: 12px;
@@ -362,26 +375,28 @@ p.box-content {
     width: 20%;
     height: 275px;
     margin-bottom: 40px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .image {
+    height: 65%;
     width: 100%;
     padding: 0 12px 0 0;
     height: 65%;
-    /* border: 1px dashed black; */
+    border: 1px dashed black;
 }
 
 .thumbnail {
     height: 100%;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .box-content {
     width: 100%;
     height: 35%;
     display: flex;
+    /* justify-content: space-between; */
     padding: 12px 12px 0 0;
     border: 1px solid red;
 
@@ -390,7 +405,8 @@ p.box-content {
 .user {
     height: 35px;
     width: 35px;
-    margin: 2px;
+    /* margin: 2px; */
+    border: 1px solid black;
 }
 
 .user-image {
@@ -475,10 +491,19 @@ p.box-content {
     .youtube-video-box {
         width: 25%;
     }
+
+    #search{
+        width: 30vw;
+        border: 1px solid red;
+    }
 }
 
 
 @media screen and (min-width: 1082px) and (max-width: 1575px) {
+    
+    #search{
+        width: 35vw;
+    }
     .youtube-video-box {
         width: 33.3%;
         height: 360px;
@@ -493,6 +518,8 @@ p.box-content {
 
 @media screen and (max-width: 1312px) {
 
+    
+    
     #side-bar {
         left: -240px;
     }
@@ -517,10 +544,27 @@ p.box-content {
 }
 
 @media screen and (max-width: 1081px) {
+    #search{
+        width: 36vw
+    }
+
+    .right-header-div{
+        width: 100px;
+    }
+
+    .right-header-div-content-3{
+        height: 25px;
+        width: 25px;
+    }
+    
     .youtube-video-box {
         width: 50%;
         height: 390px;
         margin-bottom: 0px;
+    }
+
+    .small-sidebar{
+        border: 1px solid blue;
     }
 
     .image {
@@ -530,14 +574,14 @@ p.box-content {
 
 @media screen and (max-width: 768px) {
     .left-header-div{
-        width: 130px;
+        width: 100px;
         height: 100%;
         /* border: 1px solid blue; */
         padding-left: 20px;
     }
     
     .left-header-div-content-2{
-        width: 85px;
+        width: 65px;
         /* margin was not working so i use position to shift it from left */
         position: relative;
         left: 30px;
@@ -545,11 +589,16 @@ p.box-content {
         /* border: 1px solid black; */
     }
 
-    .country-code{
+    /* .country-code{
         margin-left: 30px;
         font-size: 9px;
-    }
+    } */
 
+    sup{
+        font-size: 8px;
+        margin-left: 4px;
+        margin-top: 8px;
+    }
     .sideIconToggle{
         width: 15px;
     }
@@ -570,7 +619,7 @@ p.box-content {
 
     #search{
         height: 100%;
-        width: 37vw;
+        width: 35vw;
         border-radius: 20px 0px 0px 20px;
         /* border: 1px solid black; */
     }
@@ -637,6 +686,10 @@ p.box-content {
         margin-top: -5px;
         margin-left: 15px;
         /* border: 1px solid red; */
+    }
+
+    #search{
+
     }
 
     #search-button{
