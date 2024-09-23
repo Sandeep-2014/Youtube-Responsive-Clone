@@ -12,6 +12,108 @@ body {
     overflow-x: hidden;
 }
 
+.mobile-header{
+    position: fixed;
+    top: -40px;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 5px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.mobile-left{
+    width: 20%;
+    height: 30px;
+    /* border: 1px solid black; */
+}
+
+.mobile-left img{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+
+.mobile-right{
+    width: 35%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3px;
+    /* border: 1px solid blue; */
+}
+
+.mobile-right img{
+    height: 25px;
+    width: 35px;
+    /* border: 1px solid black; */
+}
+
+/* mobile footer */
+
+.mobile-footer{
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    bottom: -45px;
+    background-color: white;
+    padding: 3px 8px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    z-index: 999999;
+}
+
+.mobile-footer-icon{
+    height: 35px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.mobile-footer-icon img{
+    width: 25px;
+    height: 20px;
+}
+.mobile-footer-icon p, .mobile-footer-user-icon p{
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.mobile-footer-center{
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.mobile-footer-center img{
+    height: 27px;
+    /* width: 25px; */
+    /* border: 1px solid black; */
+}
+
+.mobile-footer-user-icon{
+    height: 35px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-footer-user-icon img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
 /* header section css */
 
 
@@ -34,9 +136,9 @@ body {
     display: flex;
     align-items: center;
     /* border: 2px solid red; */
-    padding-left: 28px;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-left: 25px;
+    /* padding-top: 5px; */
+    /* padding-bottom: 10px; */
 
 }
 
@@ -45,14 +147,12 @@ body {
     height: 50px;   
     width: 100px;
     margin-left: 40px;
+    margin-top: 7px;
     /* border: 2px solid black; */
 }
 
-.youtube-name{
 
-}
-
-.youtube-icon{
+.left-header-div-content-2 img{
     height: 80%;
     width: 100%;
     /* width: 100%; */
@@ -86,7 +186,7 @@ sup{
 form {
     display: flex;
     height: 36px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #search {
@@ -117,7 +217,7 @@ input {
     height: 100%;
     /* border: 2px solid rgba(233, 218, 218, 0.5); Red border with 50% opacity   */
     /* opacity: 0.3; */
-    border: 0.1px solid rgba(128, 128, 128, 0.556);
+    /* border: 0.1px solid rgba(24, 23, 23, 0.556); */
 
 
 
@@ -166,23 +266,10 @@ input::placeholder {
     border-radius: 50%;
 }
 
-
-/* main container css */
-/* .main-content {
-    display: flex;
-    width: 100%;
-    position: relative;
-    top: 53px;
-    background-color: white;
-    border: 2px solid rgb(174, 15, 134);
-
-} */
-
-
 .small-sidebar {
     width: 75px;
     height: 97%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     position: fixed;
     padding-top: 10px;
     left: -75px;
@@ -280,14 +367,12 @@ input::placeholder {
 .side-part-1-heading {
     font-size: 14px;
     line-height: 2;
-    /* font-weight: bold; */
     font-weight: 700;
 }
 
 .side-part-1-content {
     height: 40px;
     min-height: 40px;
-    /* width: 180px; */
     padding: 0 12px 0 12px;
     display: flex;
     align-items: center;
@@ -359,13 +444,10 @@ input::placeholder {
 /* youtube video section */
 
 .youtube-video {
-    border: 1px solid black;
-    /* height: 600px; */
     width: calc(100% - 245px);
     top: 120px;
     left: 245px;
     position: relative;
-    /* top: 60px; */
     display: flex;
     flex-wrap: wrap;
     padding-left: 12px;
@@ -375,7 +457,7 @@ input::placeholder {
     width: 20%;
     height: 275px;
     margin-bottom: 40px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .image {
@@ -383,7 +465,7 @@ input::placeholder {
     width: 100%;
     padding: 0 12px 0 0;
     height: 65%;
-    border: 1px dashed black;
+    /* border: 1px dashed black; */
 }
 
 .thumbnail {
@@ -396,17 +478,15 @@ input::placeholder {
     width: 100%;
     height: 35%;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding: 12px 12px 0 0;
-    border: 1px solid red;
 
 }
 
 .user {
     height: 35px;
     width: 35px;
-    /* margin: 2px; */
-    border: 1px solid black;
+    border-radius: 50%;
 }
 
 .user-image {
@@ -416,7 +496,6 @@ input::placeholder {
 }
 
 .about-video {
-    /* border: 1px solid red; */
     width: 82%;
 }
 
@@ -459,15 +538,6 @@ input::placeholder {
     height: 22px;
     width: 22px;
     /* border: 1px solid red; */
-    padding-left: 10px;
-}
-
-.more {
-    height: 4px;
-    width: 4px;
-    border-radius: 50%;
-    background-color: black;
-    margin-bottom: 3px;
 }
 
 
@@ -481,20 +551,33 @@ input::placeholder {
     }
 }
 
-@media screen and (min-width: 1901px) and (max-width: 2227px) {
+@media screen and (min-width: 1902px) and (max-width: 2228px) {
     .youtube-video-box {
         width: 20%;
+    }
+
+    #opensidebarMenu:checked ~ .youtube-video .youtube-video-box{
+        width: 16.6%;
     }
 }
 
 @media screen and (min-width: 1576px) and (max-width: 1901px) {
     .youtube-video-box {
-        width: 25%;
+        min-height: auto;
+        max-width: 25%;
+        max-height: 330px;
+    }
+
+    .image{
+        padding: 0 10px 0 0 ;
+    }
+
+    .box-content{
+        padding: 12px 10px 0 0 ;
     }
 
     #search{
         width: 30vw;
-        border: 1px solid red;
     }
 }
 
@@ -510,17 +593,22 @@ input::placeholder {
         margin-bottom: 0px;
     }
 
-    .image {
-        padding: 0 24px 0 0;
+    .image{
+        padding: 0 13px 0 0;
     }
+
+    .box-content{
+        padding: 12px 8px 0 0;
+
+    }
+
+    
 }
 
 
 @media screen and (max-width: 1312px) {
-
-    
-    
     #side-bar {
+        width: 200px;
         left: -240px;
     }
 
@@ -562,275 +650,74 @@ input::placeholder {
         height: 390px;
         margin-bottom: 0px;
     }
-
-    .small-sidebar{
-        border: 1px solid blue;
-    }
-
-    .image {
-        padding: 0 20px 0 0;
-    }
+    
 }
 
 @media screen and (max-width: 768px) {
-    .left-header-div{
-        width: 100px;
-        height: 100%;
-        /* border: 1px solid blue; */
-        padding-left: 20px;
-    }
     
-    .left-header-div-content-2{
-        width: 65px;
-        /* margin was not working so i use position to shift it from left */
-        position: relative;
-        left: 30px;
-        bottom: 2px;
-        /* border: 1px solid black; */
+    #side-bar{
+        width: 170px;
     }
 
-    /* .country-code{
-        margin-left: 30px;
-        font-size: 9px;
-    } */
-
-    sup{
-        font-size: 8px;
-        margin-left: 4px;
-        margin-top: 8px;
-    }
-    .sideIconToggle{
-        width: 15px;
+    .side-part-1-content p{
+        font-size: 10px;
     }
 
-    .left-header-div-content-2{
-        margin-left: 0;
+    .youtube-video-box{
+        height: 300px;
     }
-
-    .center-header-div{
-        /* border: 1px solid black; */
-        height: 85%;
-    }
-
-    form{
-        height: 100%;
-        /* border: 1px solid crimson; */
-    }
-
-    #search{
-        height: 100%;
-        width: 35vw;
-        border-radius: 20px 0px 0px 20px;
-        /* border: 1px solid black; */
-    }
-
-    input{
-        height: 100%;
-    }
-
-    #search-button{
-        height: 100%;
-        width: 55px;
-        border-radius: 0px 15px 15px 0px;
-    }
-
-    .right-header-div{
-        width: 100px;
-    }
-
-    .right-header-div-content-3{
-        height: 25px;
-        width: 25px;
-    }
-
 }
 
 
-@media screen and (max-width: 425px) {
-    
+@media screen and (max-width: 640px) {
     .header{
-        height: 40px;
-        justify-content: flex-start;
+        top: -53px;
     }
 
-    .sideIconToggle{
-        padding-top: 5px;
-        /* border: 1px solid black; */
+    .mobile-header{
+        /* top: 0; */
+        position: static;
     }
 
-    .spinner{
-        height: 1px;
-    }
-    
-    .left-header-div{
-        padding-left: 11px;
-    }
-
-    .left-header-div-content-2{
-        left: 20px;
-    }
-
-    .left-header-div-content-2{
-        width: 70px;
-        margin-top: 7px;
-    }
-
-    .country-code{
-        margin-left: 15px;
-        font-size: 5px;
-    }
-
-    .center-header-div{
-        /* height: 100%; */
-        height: 25px;
-        margin-top: -5px;
-        margin-left: 15px;
-        /* border: 1px solid red; */
-    }
-
-    #search{
-
-    }
-
-    #search-button{
-        height: 100%;
-        width: 33px;
-        border-radius: 0px 15px 15px 0px;
-    }
-
-    button > svg{
-        height: 17px;
-        width: 17px;
-        padding-right: 2px;
-        /* border: 1px solid crimson; */
-    }
-
-    form{
-        /* height: 30px; */
-    }
-
-    .mic-container{
-        /* border: 1px solid red; */
-        height: 25px;
-        width: 25px;
-        margin-left: 8px;
-
-    }
-
-    .mic{
-        margin-top: 3px;
-        margin-left: 3px;
-        /* margin-bottom: 10px; */
-    }
-
-    #mic-icon{
-        /* border: 1px solid blue; */
-        height: 15px;
-        width: 15px;
-    }
-
-    .right-header-div{
-        margin-left: 18px;
-
-    }
-
-    .right-header-div-content-1 > svg, .right-header-div-content-2 > svg{
-        /* border: 1px solid blue; */
-        height: 15px;
-        width: 15px;
-    }
-
-    .right-header-div-content-3{
-        height: 15px;
-        width: 15px;
-    }
-
-    .right-header-div-content-2,
-    .right-header-div-content-1 {
-        margin-right: 5px;
-    }
-
-    .main-content{
-        /* border: 1px solid black; */
-        top: 40px;
+    .mobile-footer{
+        bottom: 0;
     }
 
     .small-sidebar{
-        width: 50px;
-        padding-top: 5px;
-        border: 1px solid red;
-    }
-
-    .small-div-box>svg{
-        border: 1px solid black;
-        height: 18px;
-        padding-left: 10px;
-    }
-
-    .box-content{
-        font-size: 7px;
-    }
-
-    .sub{
-        padding-left: 2px;
+        left: -75px;
     }
 
     .suggestion{
         /* border: 1px solid black; */
-        width: calc(100% - 50px);
-        height: 30px;
-        left: 55px;
-        padding-right: 15px;
+        width: 100%;
+        top: 40px;
+        left: 0;
+        position: static;
     }
 
     .youtube-video{
-        border: 1px solid red;
-        width: calc(100% - 50px);
-        left: 50px;
-        top: 35px;
-        padding-left: 5px;
+        width: 100%;
+        left: 0;
+        top: 5px;
+        padding: 0;
     }
 
     .youtube-video-box{
-        height: 180px;
-        border: 1px solid black;
+        width: 100%;
+        height: 335px;
+        margin: 0;
     }
 
     .image{
-        height: 60%;
-        padding: 0 8px 0 0;
+        padding: 0;
+    }
+
+    .thumbnail{
+        border-radius: 0;
     }
 
     .box-content{
-        height: 40%;
-        padding-top: 5px;
-        border: 1px solid blue;
-    }
+        padding: 12px 12px 0 12px;
 
-    .about-video{
-        padding-left: 5px;
-    }
-
-    .user{
-        height: 22px;
-        width: 22px;
-    }
-
-    .title{
-        font-size: 8px;
-        line-height: 1.2;
-        margin-bottom: 5px;
-    }
-
-    .seprator{
-        margin: 0;
-        margin: 2px 2px 0 4px;
-    }
-
-    .channel,
-    .view,
-    .date {
-        font-size: 7px;
-        line-height: 1.5;
     }
 }
